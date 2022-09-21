@@ -1,6 +1,8 @@
 # 1) print out the value for the key 'history' using the dictionary below
 
-
+#sampleDict is a dictionary w/ one key 
+#that key is class which has student
+#student has 2 keys which are name and marks
 sampleDict = { 
    "class":{ 
       "student":{ 
@@ -13,13 +15,17 @@ sampleDict = {
    }
 }
 
-
+#prints out history value of 80
+print(sampleDict['class']['student']['marks']['history'])
 
 
 # 2) Add 2 inches to the son's height.
 
 dict={"son's name": "Lucas", "son's eyes": "green", "son's height": 32, "son's weight": 25}
 
+dict["son's height"] += 2
+
+print(dict)
 
 
 
@@ -32,7 +38,9 @@ sampleDict = {
      'emp3': {'name': 'Brad', 'salary': 6500}
 }
 
+sampleDict['emp3']['salary'] = 8500
 
+print(sampleDict)
 
 
 
@@ -42,4 +50,6 @@ sampleDict = {
 
 dict={"name": "Plato", "country": "Ancient Greece", "born": -427, "teacher": "Socrates", "student": "Aristotle"}
 
+dict['work'] = ['Apology', 'Phaedo', 'Republic', 'Symposium']
 
+print(dict)

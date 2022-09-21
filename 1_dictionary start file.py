@@ -143,6 +143,7 @@ print() #allows u to remove key value pair from your dictionary
 remove = phonebook.pop('Chris' , 'key not found')
 
 print(remove)
+
 print(phonebook)
 
 
@@ -158,6 +159,7 @@ print()
 print('*****  start section 8 - using popitem ********')
 print()
 
+print(phonebook)
 a = phonebook.popitem()
 
 print(a)
@@ -174,15 +176,18 @@ print()
 print()
 print('*****  start section 9 - using random and converting to list ********')
 print() #use random aspect of a list 
+#random.choice will pick a random element in your list
 
-
-list_of_keys = list(phonebook)
+list_of_keys = list(phonebook) #creates list w phonebook elements
 print(list_of_keys)
-random_key = random.choice(list_of_keys)
+random_key = random.choice(list_of_keys) #choose random element in that list
 print(random_key)
-print(phonebook[random_key])
-
-print(phonebook[random.choice(list(phonebook))])
+random_value = phonebook[random_key]
+print(random_value)
+ 
+#alternate way(you can also just do this for efficiency)
+random_value = phonebook[random.choice(list(phonebook))]
+print(random_value)
 
 
 print()

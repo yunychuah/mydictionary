@@ -17,7 +17,7 @@ room-number,use,sq-ft,price
 
 
 
-
+#in this dictionary u have one key which is medical and in this dictionary there is a list b/c []
 datastore = { "medical":[
       { "room-number": 100,
         "use": "reception",
@@ -47,3 +47,12 @@ datastore = { "medical":[
 
       ]
 }
+
+outfile = open('retail_space2.csv' , 'w')
+outfile.write('room-number,use,sq-ft,price\n')
+#now u want to extract values for each of the categories
+#for loop to iterate that info 
+for i in datastore['medical']:
+  outfile.write(str(i['room-number'])+','+i['use']+','+str(i['sq-ft'])+','+str(i['price'])+'\n')
+
+outfile.close
